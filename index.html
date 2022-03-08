@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@100;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<div class="container">
+
+    <!-- header -->
+    <header class="navbar navbar_container">
+        <button class="menu_button open" onclick="menuOpen()"><img src="img/menu.png" alt=""></button>
+        <button class="menu_button close" onclick="menuClose()"><img src="img/close.png" alt=""></button>
+        <div class="logo">
+            <img src="img/js.png" alt="javascript" style="width: 70px;">
+        </div>
+        <ul class="navbar">
+            <li class="navbar_item" onclick="menuClose()"><a href="#part1">Фреймворки</a></li>
+            <li class="navbar_item" onclick="menuClose()"><a href="#part2">JavaScript</a></li>
+            <li class="navbar_item" onclick="menuClose()"><a href="#part3">Полезно знать</a></li>
+            <li class="navbar_item" onclick="menuClose()"><a href="#part4">Учебник</a></li>
+            <li class="navbar_item" onclick="menuClose()"><a href="#part5">Подписка</a></li>
+        </ul>
+    </header>
+    <div class="wrapper">
+        <button class="button_up " id="goUp"><a href="#top"><img src="img/arrow.png" alt="arrow"></a></button>
+        <div class="section_container" id="top">
+            <button onclick="move(`left`)" class="switcher left"><img src="img/left.png" alt="left arrow"></button>
+            <div class="section section1">
+                <div class="section_text">
+                    <h1 class="section_text_heading">Зайди в учебник</h1>
+                    <p class="section_text_p">В учебнике собрано много полезной информации для начинающих программистов
+                    </p>
+                    <button class="textbook_link_button button"
+                        onclick="window.location.href='textbook.html'">Перейти</button>
+                </div>
+            </div>
+            <div class="section section2">
+                <div class="section_text">
+                    <h1 class="section_text_heading">Подпишись на рассылку</h1>
+                    <p lass="section_text_p">Подпишитесь, чтобы получать новую информацию по почте</p>
+                </div>
+            </div>
+            <div class="section section3">
+                <div class="section_text">
+                    <h1 class="section_text_heading">Начни учиться</h1>
+                    <p lass="section_text_p">Начни учиться программированию прямо сегодня!</p>
+                </div>
+            </div>
+            <button onclick="move(`right`)" class="switcher right"><img src="img/right.png" alt="right arrow"></button>
+        </div>
+        <!-- frameworks -->
+        <div class="frameworks_container" id="part1">
+            <h2>Фреймворки JavaScript</h2>
+            <div class="frameworks_element">
+                <div class="frameworks_header">
+                    <h4 id="1">
+                        Плюсы и минусы Vue.js
+                    </h4>
+                    <button onclick="showall(1)" class="arrow_down"><img src="img/down.png" alt="arrow down"></button>
+                </div>
+                <div class="frameworks_text_info element1">
+                    <p>Vue.js — это JavaScript-фреймворк, основанный в 2013 году, который
+                        идеально подходит для создания высокоадаптируемых
+                        пользовательских интерфейсов и сложных одностраничных приложений.</p>
+                    <ul> <b>Преимущества Vue.js</b>
+                        <li>Усиленный HTML. Это означает, что Vue.js имеет много характеристик схожих с Angular, а
+                            это,
+                            благодаря использованию
+                            различных компонентов, помогает оптимизации HTML- блоков.</li>
+                        <li>Подробная документация. Vue.js имеет очень подробную документацию, которая может
+                            ускорить
+                            процесс обучения для
+                            разработчиков и сэкономить много времени на разработку приложения, используя только
+                            базовые
+                            знания HTML и JavaScript.</li>
+                        <li>Адаптивность. Может быть осуществлен быстрый переход от других фреймворков к Vue.js
+                            из-за
+                            сходства с Angular и React с
+                            точки зрения дизайна и архитектуры.</li>
+                        <li>Масштабирование. Vue.js может помочь в разработке довольно больших шаблонов
+                            многократного
+                            использования, которые могут
+                            быть сделаны почти за тоже время, что и более простые.</li>
+                    </ul>
+                    <ul> <b>Недостатки Vue.js</b>
+                        <li>Недостаток ресурсов. Vue.js по-прежнему занимает довольно небольшую долю рынка по
+                            сравнению
+                            с React или Angular, что
+                            означает, что обмен знаниями в этой среде все еще находится на начальной стадии.</li>
+                        <li>Риск чрезмерной гибкости. Иногда у Vue.js могут возникнуть проблемы при интеграции в
+                            огромные проекты, и пока еще нет
+                            опыта возможных решений, но они обязательно появятся в ближайшее время.</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="frameworks_element">
+                <div class="frameworks_header">
+
+                    <h4 id="2">Плюсы и минусы Angular</h4>
+                    <button onclick="showall(2)" class="arrow_down"><img src="img/down.png" alt="arrow down"></button>
+                </div>
+                <div class="frameworks_text_info element2">
+                    <p>Angular — это супергероическая среда JavaScript MVVM, основанная в 2009 году, которая отлично
+                        подходит для создания
+                        интерактивных веб-приложений.</p>
+                    <ul> <b>Преимущества Angular</b>
+                        <li>Angular используется вместе с Typescript. Он имеет исключительную поддержку для этого.
+                        </li>
+                        <li>Angular-language-service — обеспечивает интеллектуальные возможности и автозаполнение
+                            шаблона HTML-компонента.</li>
+                        <li>Новые функции, такие как generation Angular, использующие библиотеки npm из CLI,
+                            generation, и разработка компонентов,
+                            использующая Angular.</li>
+                        <li>Подробная документация, позволяющая разработчику получить всю необходимую информацию, не
+                            прибегая к помощи его коллег.
+                            Однако это требует больше времени для обучения.</li>
+                    </ul>
+                    <ul> <b>Недостатки Angular</b>
+                        <li>Разнообразие различных структур (Injectables, Components, Pipes, Modules и т. д.)
+                            усложняет изучение по сравнению с
+                            React и Vue.js, у которых есть только «Component».</li>
+                        <li>Относительно медленная производительность, учитывая различные показатели. С другой
+                            стороны, это можно легко решить,
+                            используя так называемый «ChangeDetectionStrategy», который помогает вручную
+                            контролировать процесс рендеринга
+                            компонентов.</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="frameworks_element">
+                <div class="frameworks_header">
+
+                    <h4 id="3">Плюсы и минусы React</h4>
+                    <button onclick="showall(3)" class="arrow_down"><img src="img/down.png" alt="arrow down"></button>
+                </div>
+                <div class="frameworks_text_info element3">
+                    <p>React — это библиотека JavaScript, разработанная Facebook в 2013 году, которая отлично
+                        подходит для создания современных
+                        одностраничных приложений любого размера и масштаба.</p>
+                    <ul> <b>Преимущества React</b>
+                        <li>Легко изучить, благодаря простому дизайну, использованию JSX (HTML-подобный синтаксис)
+                            для шаблонов и очень подробной
+                            документации. Разработчики тратят больше времени на написание современного JavaScript и
+                            меньше беспокоятся о коде,
+                            специфичном для фреймворка.
+                        </li>
+                        <li>Очень быстрая, благодаря реализации React Virtual DOM и различным оптимизациям
+                            рендеринга.</li>
+                        <li>Отличная поддержка рендеринга на стороне сервера, что делает его мощной платформой для
+                            контент-ориентированных
+                            приложений.</li>
+                        <li>Первоклассная поддержка Progressive Web App (PWA) благодаря генератору приложений
+                            `create-react-app`.</li>
+                    </ul>
+                    <ul> <b>Недостатки React</b>
+                        <li>Сообщество делится по способам написания CSS в React, которые разделяются на
+                            традиционные таблицы стилей (CSS Modules) и
+                            CSS-in-JS (т.е. Emotion и Styled Components).</li>
+                        <li>React отходит от компонентов на основе классов, что может стать препятствием для
+                            разработчиков, которым более комфортно
+                            работать с объектно-ориентированным программированием (ООП).</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- some information -->
+        <div class="theory_container">
+            <div class="theory_wrapper" id="part2">
+
+                <div class="theory_left">
+                    <h2>JavaScript</h2>
+                    <p>JavaScript – это мультипарадигменный язык программирования, который обычно применяется в качестве
+                        встраиваемого
+                        инструмента для программного доступа к различным объектам приложений Язык JS – это то,
+                        что «оживляет» разметку
+                        страниц. Сегодня JavaScript является базовым
+                        языком программирования
+                        для браузеров.</p>
+                </div>
+                <div class="theory_right">
+                    <img src="img/svg2.svg" alt="programming svg image">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- useful info -->
+
+        <div class="more_info_container" id="part3">
+            <h2 class="more_info_heading">Полезно знать:</h2>
+            <div class="more_info">
+                <div class="more_info_element element1">
+                    <h5>Анимации на CSS и JavaScript.</h5>
+                    <h4>Анимация</h4>
+                    <p>С помощью JavaScript-анимаций можно делать вещи, которые нельзя реализовать на CSS.
+
+                        Например, движение по сложному пути с временной функцией, отличной от кривой Безье, или
+                        canvas-анимации.</p>
+                    <a href="https://learn.javascript.ru/js-animation" target="_blank" class="link">Читать в
+                        источнике</a>
+                </div>
+                <div class="more_info_element element2">
+                    <h5>document.cookie</h5>
+                    <h4>Куки</h4>
+                    <p>Куки – это небольшие строки данных, которые хранятся непосредственно в браузере. Затем
+                        браузер
+                        будет автоматически добавлять их
+                        в (почти) каждый запрос на тот же домен при помощи заголовка Cookie.</p>
+                    <a href="https://learn.javascript.ru/cookie" target="_blank" class="link">Читать в источнике</a>
+                </div>
+                <div class="more_info_element element3">
+                    <h5>сетевые запросы</h5>
+                    <h4>Fetch</h4>
+                    <p>
+                        Есть несколько способов делать сетевые запросы.
+
+                        Метод fetch — современный и очень мощный, поэтому начнём с него. Он не поддерживается
+                        старыми, но поддерживается всеми современными браузерами.</p>
+                    <a href="https://learn.javascript.ru/fetch" target="_blank" class="link">Читать в источнике</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- link to textbook -->
+
+        <div id="part4">
+            <div class="textbook_link">
+                <div class="textbook_left">
+                    <img src="img/svg1.svg" alt="programming svg image">
+                </div>
+                <div class="textbook_link_text">
+
+                    <h2>Перейти в учебник</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid illo dolores aperiam, unde,
+                        ipsam illum magni exercitationem ab ullam, quam repellat. Quia doloribus aliquam magnam sed?
+                        Delectus error et deleniti.</p>
+                    <button class="textbook_link_button button"
+                        onclick="window.location.href='textbook.html'">Перейти</button>
+                </div>
+            </div>
+            <div class="subscription_section" id="part5">
+
+                <div class="subscription_form_container">
+                    <form class="subscription_form">
+                        <h2>Подпишись на рассылку</h2>
+                        <input class="subscription_form_input" type="email" placeholder="Ваша почта" />
+                        <input class="subscription_form_input" type="text" placeholder="Ваше имя" />
+                        <button class="subscription_form_button button" type="submit">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
