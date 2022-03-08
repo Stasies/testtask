@@ -1,93 +1,3 @@
-let counter = 0;
-// document.querySelector(".left").disabled = true;
-// function goleft() {
-//   let boxes = document.querySelectorAll(".section");
-//   if (counter) {
-//     counter--;
-//     document.querySelector(".right").disabled = false;
-//     let numbr = 100 * counter;
-//     for (const box of boxes) {
-//       box.style.transform = `translateX(` + numbr + `vw)`;
-//     }
-//   } else {
-//   }
-//   console.log(counter);
-// }
-// function goright() {
-//   let boxes = document.querySelectorAll(".section");
-//   if (counter < boxes.length - 1) {
-//     document.querySelector(".left").disabled = false;
-//     counter++;
-//     let numbr = -100 * counter;
-//     for (const box of boxes) {
-//       box.style.transform = `translateX(` + numbr + `vw)`;
-//     }
-//   } else {
-//     document.querySelector(".right").disabled = true;
-//   }
-//   console.log(counter);
-// }
-
-function move(direction) {
-  let boxes = document.querySelectorAll(".section");
-  let numbr;
-  if (direction === "right" && counter < 2) {
-    counter++;
-    console.log(counter);
-    numbr = -100 * counter;
-    for (const box of boxes) {
-      box.style.transform = `translateX(` + numbr + `vw)`;
-    }
-  }
-  if (direction === "left" && counter > 0) {
-    numbr = 100 - 100 * counter;
-    counter--;
-    for (const box of boxes) {
-      box.style.transform = `translateX(` + numbr + `vw)`;
-    }
-  }
-}
-
-// let counter = 0;
-
-// function goleft() {
-//   console.log(counter);
-//   if (counter > 0) {
-//     counter++;
-//     let num = counter * -100;
-//     let boxes = document.querySelectorAll(".section");
-//     for (const box of boxes) {
-//       box.style.transform = `translateX(` + num + `vw)`;
-//     }
-//   }
-// }
-// function goright() {
-//   console.log(counter);
-//   if (counter < 2 && counter >= 0) {
-//     counter++;
-//     let num = counterRight * -100;
-//     let boxes = document.querySelectorAll(".section");
-//     for (const box of boxes) {
-//       box.style.transform = `translateX(` + num + `vw)`;
-//     }
-//   } else {
-//     let boxes = document.querySelectorAll(".section");
-//     for (const box of boxes) {
-//       box.style = `disabled`;
-//     }
-//   }
-// }
-
-let open = false;
-function showall(order) {
-  open = !open;
-  if (open === true) {
-    document.querySelector(`.element` + order).classList.add("show");
-  } else {
-    document.querySelector(`.element` + order).classList.remove("show");
-  }
-}
-
 let info = [
   {
     id: 1,
@@ -354,6 +264,38 @@ let info = [
   },
 ];
 
+let counter = 0;
+
+function move(direction) {
+  let boxes = document.querySelectorAll(".section");
+  let numbr;
+  if (direction === "right" && counter < 2) {
+    counter++;
+    console.log(counter);
+    numbr = -100 * counter;
+    for (const box of boxes) {
+      box.style.transform = `translateX(` + numbr + `vw)`;
+    }
+  }
+  if (direction === "left" && counter > 0) {
+    numbr = 100 - 100 * counter;
+    counter--;
+    for (const box of boxes) {
+      box.style.transform = `translateX(` + numbr + `vw)`;
+    }
+  }
+}
+
+let open = false;
+function showall(order) {
+  open = !open;
+  if (open === true) {
+    document.querySelector(`.element` + order).classList.add("show");
+  } else {
+    document.querySelector(`.element` + order).classList.remove("show");
+  }
+}
+
 let potato = info.map((inf) => inf.heading);
 function newData(n) {
   document.querySelector(".textbook_information_container").innerHTML = info[
@@ -366,32 +308,6 @@ function newData(n) {
   document.querySelector(".textbook_topic_heading").innerHTML =
     info[n - 1].heading;
 }
-
-// let scrollPos = 0;
-// const nav = document.querySelector("#goUp");
-
-// function checkPosition() {
-//   let windowY = window.scrollY;
-//   if (windowY < scrollPos) {
-//     // Scrolling UP
-//     nav.classList.add("shown");
-//     nav.classList.remove("hidden");
-//   } else {
-//     // Scrolling DOWN
-//     nav.classList.add("hidden");
-//     nav.classList.remove("shown");
-//   }
-//   scrollPos = windowY;
-//   console.log(windowY);
-// }
-
-// window.addEventListener("scroll", checkPosition);
-
-goUp = document.getElementById("goUp");
-goUp.addEventListener("click", () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
 
 function menuOpen() {
   document.querySelector(".navbar_container").classList.add("opened");
