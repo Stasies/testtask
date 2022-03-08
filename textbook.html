@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <button class="menu_button open" onclick="themeShow()"><img src="menu.png" alt=""></button>
+        <button class="menu_button close" onclick="themeRemove()"><img src="close.png" alt=""></button>
+        <div class="logo">
+            <img src="img/js.png" alt="javascript" style="width: 70px;">
+        </div>
+        <ul class="textbook_navbar">
+            <a href="index.html">
+                <li>Вернуться на главную</li>
+            </a>
+        </ul>
+
+    </header>
+    <div class="textbook_container">
+
+        <div class="textbook_navigation" onclick="newData()">
+            <ul class="textbook_navigation_list">
+                <li class="textbook_navigation_list_item" id="theme1" onclick="newData(1)">Переменные</li>
+                <li class="textbook_navigation_list_item" id="theme2" onclick="newData(2)">Типы данных</li>
+                <li class="textbook_navigation_list_item" id="theme3" onclick="newData(3)">Базовые операторы, математика
+                </li>
+                <li class="textbook_navigation_list_item" id="theme4" onclick="newData(4)">Циклы while и for</li>
+                <li class="textbook_navigation_list_item" id="theme5" onclick="newData(5)">Функции</li>
+                <li class="textbook_navigation_list_item" id="theme6" onclick="newData(6)">Функции-стрелки</li>
+                <li class="textbook_navigation_list_item" id="theme7" onclick="newData(7)">Обработка ошибок,
+                    "try..catch"</li>
+                <li class="textbook_navigation_list_item" id="theme8" onclick="newData(8)">Условное ветвление: if, '?'
+                </li>
+                <li class="textbook_navigation_list_item" id="theme9" onclick="newData(9)">Оператор объединения с null
+                    ??</li>
+                <li class="textbook_navigation_list_item" id="theme10" onclick="newData(10)">Взаимодействие: alert,
+                    prompt, confirm</li>
+                <li class="textbook_navigation_list_item" id="theme11" onclick="newData(11)">Копирование объектов и
+                    ссылки</li>
+            </ul>
+        </div>
+        <div class="textbook_information_section">
+            <h1 class="textbook_topic_heading">Выберите тему</h1>
+            <div class="textbook_information_container">
+                <img src="img/svg3.svg" alt="" style="margin-left: 25%; margin-top:5%; width: 50%;">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
